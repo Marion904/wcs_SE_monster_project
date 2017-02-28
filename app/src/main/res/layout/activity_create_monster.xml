@@ -139,17 +139,19 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_below="@+id/death_image_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp"
+        android:id="@+id/stats_layout">
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:layout_below="@+id/special_image_button"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="42dp"
             android:id="@+id/create_stat_life"
             android:hint="@string/add_monster_life"
             android:textColorHint="@color/textColor"/>
@@ -227,6 +229,26 @@
             android:layout_alignTop="@+id/create_stat_stamina"
             android:layout_toLeftOf="@+id/create_stat_stamina"
             android:layout_toStartOf="@+id/create_stat_stamina"
-            android:id="@+id/imageView5" />
+            android:id="@+id/imageView5"/>
     </RelativeLayout>
+
+    <Button
+        android:text="@string/back_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/back_menu_button"
+        android:background="@color/colorPrimaryDark"/>
+
+    <Button
+        android:text="@string/valider_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/back_menu_button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/valider_create_button"
+        android:background="@color/colorPrimaryDark"/>
 </RelativeLayout>

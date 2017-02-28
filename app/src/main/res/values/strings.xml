@@ -11,4 +11,8 @@
     <string name="add_monster_speed">Vitesse</string>
     <string name="add_monster_stamina">Endurance</string>
     <string name="chose_type">Quel type de monstre veux-tu créer ?</string>
+    <string name="valider_create">Valider</string>
+    <string name="back_create">Retour</string>
+    <string name="collection_title">Ma Collection de Monstres</string>
+    <string name="monter_name">Le nom de ton monstre</string>
 </resources>

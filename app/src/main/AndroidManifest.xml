@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Monster_Page" />
-        <activity android:name=".CreateMonsterActivity"></activity>
+        <activity android:name=".CreateMonsterActivity" />
+        <activity android:name=".MonsterCollectionActivity"></activity>
     </application>
 
 </manifest>
