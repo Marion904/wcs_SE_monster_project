@@ -15,4 +15,5 @@
     <string name="back_create">Retour</string>
     <string name="collection_title">Ma Collection de Monstres</string>
     <string name="monter_name">Le nom de ton monstre</string>
+    <string name="pick_stats_text">"Choisis les caractéristiques de "</string>
 </resources>

@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".Monster_Page" />
         <activity android:name=".CreateMonsterActivity" />
-        <activity android:name=".MonsterCollectionActivity"></activity>
+        <activity android:name=".MonsterCollectionActivity" />
+        <activity android:name=".CreateMonster2"></activity>
     </application>
 
 </manifest>
