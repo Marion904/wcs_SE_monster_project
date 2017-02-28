@@ -4,4 +4,11 @@
     <string name="see_monster_txt">Voir mes monstres</string>
     <string name="back_menu_button">Retourner au menu</string>
     <string name="back_list_button">Retourner à ma collection</string>
+    <string name="add_monster_name">Entre le nom de ton monstre ici</string>
+    <string name="add_monster_type">Quel type de monstre souhaite-tu ajouter ?</string>
+    <string name="add_monster_life">Vie</string>
+    <string name="add_monster_power">Force</string>
+    <string name="add_monster_speed">Vitesse</string>
+    <string name="add_monster_stamina">Endurance</string>
+    <string name="chose_type">Quel type de monstre veux-tu créer ?</string>
 </resources>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_create_monster"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.wilder.app_wcs_se_monster_project.CreateMonsterActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/add_monster_name"
+        android:textColorHint="@color/textColor"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/add_monster_name_edit" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/feu"
+        android:layout_alignTop="@+id/water_image_button"
+        android:layout_toRightOf="@+id/water_image_button"
+        android:layout_toEndOf="@+id/water_image_button"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:id="@+id/fire_image_button"
+        android:background="@color/colorPrimary"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/foudre"
+        android:layout_alignTop="@+id/fire_image_button"
+        android:layout_toRightOf="@+id/fire_image_button"
+        android:layout_toEndOf="@+id/fire_image_button"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:id="@+id/foudre_image_button"
+        android:background="@color/colorPrimary"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/magie"
+        android:id="@+id/magic_image_button"
+        android:layout_alignTop="@+id/light_image_button"
+        android:layout_toRightOf="@+id/light_image_button"
+        android:layout_toEndOf="@+id/light_image_button"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/colorPrimary"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/metal"
+        android:layout_alignTop="@+id/magic_image_button"
+        android:layout_toRightOf="@+id/magic_image_button"
+        android:layout_toEndOf="@+id/magic_image_button"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:id="@+id/metal_image_button"
+        android:background="@color/colorPrimary"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/lumiere"
+        android:id="@+id/light_image_button"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/water_image_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/mort"
+        android:layout_below="@+id/magic_image_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:id="@+id/death_image_button"
+        android:background="@color/colorPrimary"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/nature"
+        android:layout_alignTop="@+id/death_image_button"
+        android:layout_alignLeft="@+id/magic_image_button"
+        android:layout_alignStart="@+id/magic_image_button"
+        android:id="@+id/nature_image_button"
+        android:background="@color/colorPrimary"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/special"
+        android:layout_alignTop="@+id/nature_image_button"
+        android:layout_alignLeft="@+id/metal_image_button"
+        android:layout_alignStart="@+id/metal_image_button"
+        android:id="@+id/special_image_button"
+        android:background="@color/colorPrimary"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/eau"
+        android:layout_marginTop="24dp"
+        android:id="@+id/water_image_button"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/add_monster_name_edit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/chose_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_alignTop="@+id/foudre_image_button"
+        android:layout_toRightOf="@+id/foudre_image_button"
+        android:layout_toEndOf="@+id/foudre_image_button"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/special_image_button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="42dp"
+        android:id="@+id/create_stat_life"
+        android:hint="@string/add_monster_life"
+        android:textColorHint="@color/textColor"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/create_stat_life"
+        android:layout_alignLeft="@+id/create_stat_life"
+        android:layout_alignStart="@+id/create_stat_life"
+        android:layout_marginTop="11dp"
+        android:id="@+id/create_stat_power"
+        android:hint="@string/add_monster_power"
+        android:textColorHint="@color/textColor"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/create_stat_power"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="11dp"
+        android:id="@+id/create_stat_speed"
+        android:hint="@string/add_monster_speed"
+        android:textColorHint="@color/textColor"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/create_stat_speed"
+        android:layout_alignLeft="@+id/create_stat_speed"
+        android:layout_alignStart="@+id/create_stat_speed"
+        android:layout_marginTop="11dp"
+        android:id="@+id/create_stat_stamina"
+        android:hint="@string/add_monster_stamina"
+        android:textColorHint="@color/textColor"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/stat_life"
+        android:layout_above="@+id/create_stat_power"
+        android:layout_toLeftOf="@+id/create_stat_power"
+        android:layout_toStartOf="@+id/create_stat_power"
+        android:id="@+id/imageView2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/stat_power"
+        android:layout_above="@+id/create_stat_speed"
+        android:layout_toLeftOf="@+id/create_stat_speed"
+        android:layout_toStartOf="@+id/create_stat_speed"
+        android:id="@+id/imageView3" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/stat_speed"
+        android:layout_above="@+id/create_stat_stamina"
+        android:layout_toLeftOf="@+id/create_stat_stamina"
+        android:layout_toStartOf="@+id/create_stat_stamina"
+        android:id="@+id/imageView4" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/stat_stamina"
+        android:layout_alignTop="@+id/create_stat_stamina"
+        android:layout_toLeftOf="@+id/create_stat_stamina"
+        android:layout_toStartOf="@+id/create_stat_stamina"
+        android:id="@+id/imageView5" />
+
+</RelativeLayout>
