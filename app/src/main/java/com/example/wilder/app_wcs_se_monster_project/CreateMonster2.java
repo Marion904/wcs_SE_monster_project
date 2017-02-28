@@ -32,15 +32,12 @@ public class CreateMonster2 extends AppCompatActivity {
         valider_create_button= (Button) findViewById(R.id.valider_create_button);
 
 
-        EditText create_stat_life = (EditText) findViewById(R.id.create_stat_life);
-        EditText create_stat_power = (EditText) findViewById(R.id.create_stat_power);
-        EditText create_stat_speed = (EditText) findViewById(R.id.create_stat_speed);
-        EditText create_stat_stamina = (EditText) findViewById(R.id.create_stat_stamina);
+        final EditText create_stat_life = (EditText) findViewById(R.id.create_stat_life);
+        final EditText create_stat_power = (EditText) findViewById(R.id.create_stat_power);
+        final EditText create_stat_speed = (EditText) findViewById(R.id.create_stat_speed);
+        final EditText create_stat_stamina = (EditText) findViewById(R.id.create_stat_stamina);
 
-        final String life = create_stat_life.getText().toString();
-        final String power = create_stat_power.getText().toString();
-        final String stamina = create_stat_stamina.getText().toString();
-        final String speed = create_stat_speed.getText().toString();
+
 
 
         main_menu_button.setOnClickListener(new View.OnClickListener() {  //first event handler brings bacj to main menu
@@ -63,6 +60,12 @@ public class CreateMonster2 extends AppCompatActivity {
         valider_create_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+                String life = create_stat_life.getText().toString();
+                String power = create_stat_power.getText().toString();
+                String stamina = create_stat_stamina.getText().toString();
+                String speed = create_stat_speed.getText().toString();
 
                 if (life.length()!=0 || power.length()!=0 || stamina.length()!=0 || speed.length()!=0) {
 
