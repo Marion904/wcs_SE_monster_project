@@ -26,35 +26,19 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/relativeLayout2"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
         android:layout_below="@+id/collection_title">
 
-        <Button
-            android:text="@string/monter_name"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/button2"
-            android:layout_below="@id/imageView6"
-            android:background="@color/colorPrimaryDark"
-            android:padding="@dimen/activity_horizontal_margin"/>
+            android:id="@+id/relativeLayout2">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/eau"
-            android:id="@+id/imageView6"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="14dp" />
+        </RelativeLayout>
 
-
-    </RelativeLayout>
-
-
+    </ScrollView>
 
 </RelativeLayout>
