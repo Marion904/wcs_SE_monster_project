@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">App_wcs_SE_monster_project</string>
+    <string name="add_monster_txt">Ajouter un monstre</string>
+    <string name="see_monster_txt">Voir mes monstres</string>
+    <string name="back_menu_button">Retourner au menu</string>
+    <string name="back_list_button">Retourner à ma collection</string>
 </resources>
