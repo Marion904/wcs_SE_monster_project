@@ -7,12 +7,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 public class CreateMonsterActivity extends AppCompatActivity implements View.OnClickListener {
 
-    //creating all EditText with one for name and 4 for stats
+    //declaring editText name so i can use it later in onClick method.
 
-    EditText add_monster_name_edit = (EditText) findViewById(R.id.add_monster_name_edit);
+    //PENSE A .getDrawable pour envoyer une image direct dans l'intent
+
+    EditText add_monster_name_edit;
     /*EditText create_stat_life = (EditText) findViewById(R.id.create_stat_life);
     EditText create_stat_power = (EditText) findViewById(R.id.create_stat_power);
     EditText create_stat_speed = (EditText) findViewById(R.id.create_stat_speed);
@@ -44,6 +48,37 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
         ImageButton nature_image_button = (ImageButton) findViewById(R.id.nature_image_button);
             nature_image_button.setOnClickListener(this);
 
+
+        final RelativeLayout buttons_layout = (RelativeLayout) findViewById(R.id.buttons_layout); //declaring and hiding buttons layout to show when edit text is filled
+            buttons_layout.setVisibility(View.INVISIBLE);
+
+        add_monster_name_edit = (EditText) findViewById(R.id.add_monster_name_edit);  //defining monster name when onCreate is running
+
+        final Button save_name_button = (Button) findViewById(R.id.save_name_button); //creating and adding a clickListener to the "save name" button
+
+
+
+        save_name_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (add_monster_name_edit.length() == 0) {
+
+                    Toast.makeText(CreateMonsterActivity.this, getString(R.string.need_monster_name_toast), Toast.LENGTH_SHORT).show();
+
+                }
+
+                else {
+
+                    add_monster_name_edit.setEnabled(false);
+                    save_name_button.setEnabled(false);
+                    buttons_layout.setVisibility(View.VISIBLE);
+                }
+            }
+
+        });
+    }
+
         //adding the two bottom buttons and their clickListeners
 
         /*Button back_menu_button = (Button) findViewById(R.id.back_menu_button);
@@ -51,20 +86,18 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
         Button valider_create_button = (Button) findViewById(R.id.valider_create_button);
         valider_create_button.setOnClickListener(this);*/
 
-    }
-
 
     public void onClick(View v) {
 
         String type;
         String name = add_monster_name_edit.getText().toString();
+        Intent next_creation = new Intent(CreateMonsterActivity.this, CreateMonster2.class);
 
         switch (v.getId()) {
 
             case R.id.water_image_button :
 
                 type = "Eau";
-                Intent next_creation = new Intent(CreateMonsterActivity.this, CreateMonster2.class);
                 next_creation.putExtra("type", type);
                 next_creation.putExtra("name", name);
                 startActivity(next_creation);
@@ -73,7 +106,6 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
             case R.id.fire_image_button :
 
                 type = "Feu";
-                Intent next_creation = new Intent(CreateMonsterActivity.this, CreateMonster2.class);
                 next_creation.putExtra("type", type);
                 next_creation.putExtra("name", name);
                 startActivity(next_creation);
@@ -82,7 +114,6 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
             case R.id.light_image_button :
 
                 type = "Lumière";
-                Intent next_creation = new Intent(CreateMonsterActivity.this, CreateMonster2.class);
                 next_creation.putExtra("type", type);
                 next_creation.putExtra("name", name);
                 startActivity(next_creation);
@@ -91,7 +122,6 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
             case R.id.foudre_image_button :
 
                 type = "Foudre";
-                Intent next_creation = new Intent(CreateMonsterActivity.this, CreateMonster2.class);
                 next_creation.putExtra("type", type);
                 next_creation.putExtra("name", name);
                 startActivity(next_creation);
@@ -100,7 +130,6 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
             case R.id.magic_image_button :
 
                 type = "Magique";
-                Intent next_creation = new Intent(CreateMonsterActivity.this, CreateMonster2.class);
                 next_creation.putExtra("type", type);
                 next_creation.putExtra("name", name);
                 startActivity(next_creation);
@@ -109,7 +138,6 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
             case R.id.nature_image_button :
 
                 type = "Nature";
-                Intent next_creation = new Intent(CreateMonsterActivity.this, CreateMonster2.class);
                 next_creation.putExtra("type", type);
                 next_creation.putExtra("name", name);
                 startActivity(next_creation);
@@ -118,7 +146,6 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
             case R.id.death_image_button :
 
                 type = "Mort";
-                Intent next_creation = new Intent(CreateMonsterActivity.this, CreateMonster2.class);
                 next_creation.putExtra("type", type);
                 next_creation.putExtra("name", name);
                 startActivity(next_creation);
@@ -127,16 +154,14 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
             case R.id.metal_image_button :
 
                 type = "Métal";
-                Intent next_creation = new Intent(CreateMonsterActivity.this, CreateMonster2.class);
                 next_creation.putExtra("type", type);
                 next_creation.putExtra("name", name);
                 startActivity(next_creation);
                 break;
 
-            case R.id.death_image_button :
+            case R.id.special_image_button :
 
-                type = "Mort";
-                Intent next_creation = new Intent(CreateMonsterActivity.this, CreateMonster2.class);
+                type = "Special";
                 next_creation.putExtra("type", type);
                 next_creation.putExtra("name", name);
                 startActivity(next_creation);
