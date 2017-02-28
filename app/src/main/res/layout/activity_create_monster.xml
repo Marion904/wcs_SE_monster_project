@@ -136,92 +136,97 @@
         android:textColor="@color/textColor"
         android:textStyle="bold"/>
 
-    <EditText
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_below="@+id/special_image_button"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="42dp"
-        android:id="@+id/create_stat_life"
-        android:hint="@string/add_monster_life"
-        android:textColorHint="@color/textColor"/>
+        android:layout_alignParentBottom="true">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_below="@+id/create_stat_life"
-        android:layout_alignLeft="@+id/create_stat_life"
-        android:layout_alignStart="@+id/create_stat_life"
-        android:layout_marginTop="11dp"
-        android:id="@+id/create_stat_power"
-        android:hint="@string/add_monster_power"
-        android:textColorHint="@color/textColor"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_below="@+id/special_image_button"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="42dp"
+            android:id="@+id/create_stat_life"
+            android:hint="@string/add_monster_life"
+            android:textColorHint="@color/textColor"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_below="@+id/create_stat_power"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="11dp"
-        android:id="@+id/create_stat_speed"
-        android:hint="@string/add_monster_speed"
-        android:textColorHint="@color/textColor"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_below="@+id/create_stat_life"
+            android:layout_alignLeft="@+id/create_stat_life"
+            android:layout_alignStart="@+id/create_stat_life"
+            android:layout_marginTop="11dp"
+            android:id="@+id/create_stat_power"
+            android:hint="@string/add_monster_power"
+            android:textColorHint="@color/textColor"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_below="@+id/create_stat_speed"
-        android:layout_alignLeft="@+id/create_stat_speed"
-        android:layout_alignStart="@+id/create_stat_speed"
-        android:layout_marginTop="11dp"
-        android:id="@+id/create_stat_stamina"
-        android:hint="@string/add_monster_stamina"
-        android:textColorHint="@color/textColor"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_below="@+id/create_stat_power"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="11dp"
+            android:id="@+id/create_stat_speed"
+            android:hint="@string/add_monster_speed"
+            android:textColorHint="@color/textColor"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/stat_life"
-        android:layout_above="@+id/create_stat_power"
-        android:layout_toLeftOf="@+id/create_stat_power"
-        android:layout_toStartOf="@+id/create_stat_power"
-        android:id="@+id/imageView2" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_below="@+id/create_stat_speed"
+            android:layout_alignLeft="@+id/create_stat_speed"
+            android:layout_alignStart="@+id/create_stat_speed"
+            android:layout_marginTop="11dp"
+            android:id="@+id/create_stat_stamina"
+            android:hint="@string/add_monster_stamina"
+            android:textColorHint="@color/textColor"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/stat_power"
-        android:layout_above="@+id/create_stat_speed"
-        android:layout_toLeftOf="@+id/create_stat_speed"
-        android:layout_toStartOf="@+id/create_stat_speed"
-        android:id="@+id/imageView3" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/stat_life"
+            android:layout_above="@+id/create_stat_power"
+            android:layout_toLeftOf="@+id/create_stat_power"
+            android:layout_toStartOf="@+id/create_stat_power"
+            android:id="@+id/imageView2" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/stat_speed"
-        android:layout_above="@+id/create_stat_stamina"
-        android:layout_toLeftOf="@+id/create_stat_stamina"
-        android:layout_toStartOf="@+id/create_stat_stamina"
-        android:id="@+id/imageView4" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/stat_power"
+            android:layout_above="@+id/create_stat_speed"
+            android:layout_toLeftOf="@+id/create_stat_speed"
+            android:layout_toStartOf="@+id/create_stat_speed"
+            android:id="@+id/imageView3" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/stat_stamina"
-        android:layout_alignTop="@+id/create_stat_stamina"
-        android:layout_toLeftOf="@+id/create_stat_stamina"
-        android:layout_toStartOf="@+id/create_stat_stamina"
-        android:id="@+id/imageView5" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/stat_speed"
+            android:layout_above="@+id/create_stat_stamina"
+            android:layout_toLeftOf="@+id/create_stat_stamina"
+            android:layout_toStartOf="@+id/create_stat_stamina"
+            android:id="@+id/imageView4" />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/stat_stamina"
+            android:layout_alignTop="@+id/create_stat_stamina"
+            android:layout_toLeftOf="@+id/create_stat_stamina"
+            android:layout_toStartOf="@+id/create_stat_stamina"
+            android:id="@+id/imageView5" />
+    </RelativeLayout>
 </RelativeLayout>
