@@ -22,7 +22,7 @@ public class MonsterCollectionActivity extends AppCompatActivity {
 
 
         //String[][] tableau={{"Nom","Prénom"},{"Machin","Bidule"}};
-        String[] tableau={};
+        String[] tableau={"Monster - type - Life - Strength- Stamina - Speed"};
         // Create a List from String Array elements
         final List<String> collection = new ArrayList<>(Arrays.asList(tableau));
 
