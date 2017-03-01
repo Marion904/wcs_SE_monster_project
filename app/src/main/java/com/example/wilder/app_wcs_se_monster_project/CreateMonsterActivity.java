@@ -55,8 +55,16 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
         add_monster_name_edit = (EditText) findViewById(R.id.add_monster_name_edit);  //defining monster name when onCreate is running
 
         final Button save_name_button = (Button) findViewById(R.id.save_name_button); //creating and adding a clickListener to the "save name" button
+        final Button main_menu_button = (Button) findViewById(R.id.main_menu_button); //same for the "back_menu_button
 
+        main_menu_button.setOnClickListener(new View.OnClickListener() {  //first event handler brings back to main menu
+            @Override
+            public void onClick(View v) {
 
+                Intent back_menu = new Intent(CreateMonsterActivity.this, MainActivity.class);
+                startActivity(back_menu);
+            }
+        });
 
         save_name_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,7 +97,7 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
 
     public void onClick(View v) {
 
-        String type;
+        Integer type;
         String name = add_monster_name_edit.getText().toString();
         Intent next_creation = new Intent(CreateMonsterActivity.this, CreateMonster2.class);
 
@@ -97,7 +105,7 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
 
             case R.id.water_image_button :
 
-                type = "Eau";
+                type = 0;
                 next_creation.putExtra("type", type);
                 next_creation.putExtra("name", name);
                 startActivity(next_creation);
@@ -105,7 +113,7 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
 
             case R.id.fire_image_button :
 
-                type = "Feu";
+                type = 1;
                 next_creation.putExtra("type", type);
                 next_creation.putExtra("name", name);
                 startActivity(next_creation);
@@ -113,7 +121,7 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
 
             case R.id.light_image_button :
 
-                type = "Lumière";
+                type = 2;
                 next_creation.putExtra("type", type);
                 next_creation.putExtra("name", name);
                 startActivity(next_creation);
@@ -121,7 +129,7 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
 
             case R.id.foudre_image_button :
 
-                type = "Foudre";
+                type = 3;
                 next_creation.putExtra("type", type);
                 next_creation.putExtra("name", name);
                 startActivity(next_creation);
@@ -129,7 +137,7 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
 
             case R.id.magic_image_button :
 
-                type = "Magique";
+                type = 4;
                 next_creation.putExtra("type", type);
                 next_creation.putExtra("name", name);
                 startActivity(next_creation);
@@ -137,7 +145,7 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
 
             case R.id.nature_image_button :
 
-                type = "Nature";
+                type = 5;
                 next_creation.putExtra("type", type);
                 next_creation.putExtra("name", name);
                 startActivity(next_creation);
@@ -145,7 +153,7 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
 
             case R.id.death_image_button :
 
-                type = "Mort";
+                type = 6;
                 next_creation.putExtra("type", type);
                 next_creation.putExtra("name", name);
                 startActivity(next_creation);
@@ -153,7 +161,7 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
 
             case R.id.metal_image_button :
 
-                type = "Métal";
+                type = 7;
                 next_creation.putExtra("type", type);
                 next_creation.putExtra("name", name);
                 startActivity(next_creation);
@@ -161,7 +169,7 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
 
             case R.id.special_image_button :
 
-                type = "Special";
+                type = 8;
                 next_creation.putExtra("type", type);
                 next_creation.putExtra("name", name);
                 startActivity(next_creation);

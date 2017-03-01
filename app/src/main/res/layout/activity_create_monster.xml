@@ -12,6 +12,20 @@
     tools:context="com.example.wilder.app_wcs_se_monster_project.CreateMonsterActivity">
 
 
+    <Button
+        android:text="@string/save_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_monster_name_edit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:id="@+id/save_name_button"
+        android:background="@color/colorPrimaryDark"
+        android:padding="@dimen/activity_vertical_margin"/>
+
+
+
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,24 +38,14 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-    <Button
-        android:text="@string/save_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/add_monster_name_edit"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp"
-        android:id="@+id/save_name_button"
-        android:background="@color/colorPrimaryDark"
-        android:padding="@dimen/activity_vertical_margin"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="@dimen/activity_vertical_margin"
-        android:layout_marginLeft="@dimen/activity_vertical_margin"
-        android:id="@+id/buttons_layout">
+        android:id="@+id/buttons_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/save_name_button">
 
         <TextView
             android:text="@string/chose_type"
@@ -50,101 +54,108 @@
             android:id="@+id/textView"
             android:textColor="@color/textColor"
             android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:padding="@dimen/activity_vertical_margin"/>
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/nature"
-            android:id="@+id/nature_image_button"
-            android:background="@color/colorPrimary"
-            android:layout_below="@+id/water_image_button"
-            android:layout_alignLeft="@+id/water_image_button"
-            android:layout_alignStart="@+id/water_image_button"
-            android:layout_marginTop="86dp" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/special"
-            android:id="@+id/special_image_button"
-            android:background="@color/colorPrimary"
-            android:layout_alignTop="@+id/water_image_button"
-            android:layout_alignRight="@+id/textView"
-            android:layout_alignEnd="@+id/textView" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/metal"
-            android:id="@+id/metal_image_button"
-            android:background="@color/colorPrimary"
-            android:layout_alignTop="@+id/nature_image_button"
-            android:layout_alignRight="@+id/special_image_button"
-            android:layout_alignEnd="@+id/special_image_button" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/feu"
-            android:id="@+id/fire_image_button"
-            android:background="@color/colorPrimary"
-            android:layout_below="@+id/textView"
-            android:layout_alignRight="@+id/textView"
-            android:layout_alignEnd="@+id/textView" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/foudre"
-            android:id="@+id/foudre_image_button"
-            android:background="@color/colorPrimary"
-            android:layout_below="@+id/textView"
-            android:layout_alignLeft="@+id/textView"
-            android:layout_alignStart="@+id/textView" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/mort"
-            android:id="@+id/death_image_button"
-            android:background="@color/colorPrimary"
-            android:layout_alignTop="@+id/nature_image_button"
-            android:layout_alignLeft="@+id/foudre_image_button"
-            android:layout_alignStart="@+id/foudre_image_button" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/magie"
-            android:id="@+id/magic_image_button"
-            android:background="@color/colorPrimary"
-            android:layout_alignTop="@+id/water_image_button"
-            android:layout_alignLeft="@+id/foudre_image_button"
-            android:layout_alignStart="@+id/foudre_image_button" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/lumiere"
-            android:id="@+id/light_image_button"
-            android:background="@color/colorPrimary"
-            android:layout_below="@+id/textView"
+            android:padding="@dimen/activity_vertical_margin"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/special_image_button"
+            android:background="@drawable/special"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/foudre_image_button"
+            android:layout_alignLeft="@+id/nature_image_button"
+            android:layout_alignStart="@+id/nature_image_button" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/light_image_button"
+            android:background="@drawable/lumiere"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/textView"
+            android:layout_alignLeft="@+id/nature_image_button"
+            android:layout_alignStart="@+id/nature_image_button" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/nature_image_button"
+            android:background="@drawable/nature"
+            android:layout_below="@+id/light_image_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp" />
+
+        <ImageButton
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:id="@+id/foudre_image_button"
+    android:background="@drawable/foudre"
+            android:layout_alignTop="@+id/nature_image_button"
+            android:layout_alignLeft="@+id/magic_image_button"
+            android:layout_alignStart="@+id/magic_image_button" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/magic_image_button"
+            android:background="@drawable/magie"
+            android:layout_alignTop="@+id/light_image_button"
+            android:layout_toRightOf="@+id/light_image_button"
+            android:layout_toEndOf="@+id/light_image_button"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp" />
+
+        <ImageButton
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:id="@+id/death_image_button"
+    android:background="@drawable/mort"
+            android:layout_alignTop="@+id/special_image_button"
+            android:layout_alignLeft="@+id/foudre_image_button"
+            android:layout_alignStart="@+id/foudre_image_button" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:background="@drawable/eau"
             android:id="@+id/water_image_button"
-            android:layout_marginTop="73dp"
-            android:layout_below="@+id/light_image_button"
-            android:layout_alignRight="@+id/light_image_button"
-            android:layout_alignEnd="@+id/light_image_button" />
+            android:layout_alignTop="@+id/special_image_button"
+            android:layout_toLeftOf="@+id/special_image_button"
+            android:layout_toStartOf="@+id/special_image_button"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp" />
 
+        <ImageButton
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:id="@+id/metal_image_button"
+    android:background="@drawable/metal"
+            android:layout_alignTop="@+id/nature_image_button"
+            android:layout_alignLeft="@+id/water_image_button"
+            android:layout_alignStart="@+id/water_image_button" />
+
+        <ImageButton
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:id="@+id/fire_image_button"
+    android:background="@drawable/feu"
+            android:layout_alignTop="@+id/light_image_button"
+            android:layout_alignLeft="@+id/metal_image_button"
+            android:layout_alignStart="@+id/metal_image_button" />
     </RelativeLayout>
 
-
+    <Button
+        android:text="@string/back_menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_vertical_margin"
+        android:id="@+id/main_menu_button"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/save_name_button"
+        android:layout_alignStart="@+id/save_name_button"
+        android:layout_marginBottom="18dp" />
 
 </RelativeLayout>

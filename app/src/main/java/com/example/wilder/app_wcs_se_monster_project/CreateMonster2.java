@@ -29,7 +29,7 @@ public class CreateMonster2 extends AppCompatActivity {
         TextView pick_stats_text = (TextView) findViewById(R.id.pick_stats_text);   //changes the text view to display name of created monster
         pick_stats_text.setText(getString(R.string.pick_stats_text) + name);
 
-        final Button main_menu_button = (Button) findViewById(R.id.main_menu_button);   //buttons with events handler to navigate the app
+           //buttons with events handler to navigate the app
         final Button back_menu_button = (Button) findViewById(R.id.back_menu_button);
         valider_create_button= (Button) findViewById(R.id.valider_create_button);
 
@@ -39,17 +39,6 @@ public class CreateMonster2 extends AppCompatActivity {
         final EditText create_stat_speed = (EditText) findViewById(R.id.create_stat_speed);
         final EditText create_stat_stamina = (EditText) findViewById(R.id.create_stat_stamina);
 
-
-
-
-        main_menu_button.setOnClickListener(new View.OnClickListener() {  //first event handler brings bacj to main menu
-            @Override
-            public void onClick(View v) {
-
-                Intent back_menu = new Intent(CreateMonster2.this, MainActivity.class);
-                startActivity(back_menu);
-            }
-        });
 
         back_menu_button.setOnClickListener(new View.OnClickListener() {  //second one, brings back to previous page
             @Override

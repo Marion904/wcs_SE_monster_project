@@ -13,7 +13,7 @@ import java.util.List;
 public class MonsterCollectionActivity extends AppCompatActivity {
 
     Button back_to_menu;
-    Button create_new;
+    Button create;
     Button delete;
     private static List<Monster> sMonsters = null;
     private ListView collection =null;
@@ -27,12 +27,21 @@ public class MonsterCollectionActivity extends AppCompatActivity {
             sMonsters = new ArrayList<>();
         }
         back_to_menu =(Button) findViewById(R.id.retour);
-        create_new =(Button) findViewById(R.id.create);
+        create=(Button) findViewById(R.id.create);
+
         back_to_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent_menu = new Intent(MonsterCollectionActivity.this, MainActivity.class);
                 startActivity(intent_menu);
+            }
+        });
+
+        create.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent create = new Intent(MonsterCollectionActivity.this, CreateMonsterActivity.class);
+                startActivity(create);
             }
         });
 

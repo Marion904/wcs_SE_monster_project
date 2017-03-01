@@ -49,6 +49,7 @@
         android:id="@+id/create_stat_power"
         android:hint="@string/add_monster_power"
         android:textColorHint="@color/textColor"
+        android:textColor="@color/textColor"
         android:layout_marginBottom="40dp"
         android:layout_above="@+id/create_stat_stamina"
         android:layout_alignLeft="@+id/create_stat_life"
@@ -62,6 +63,7 @@
         android:id="@+id/create_stat_speed"
         android:hint="@string/add_monster_speed"
         android:textColorHint="@color/textColor"
+        android:textColor="@color/textColor"
         android:layout_below="@+id/imageView7"
         android:layout_alignLeft="@+id/create_stat_power"
         android:layout_alignStart="@+id/create_stat_power" />
@@ -74,6 +76,7 @@
         android:id="@+id/create_stat_stamina"
         android:hint="@string/add_monster_stamina"
         android:textColorHint="@color/textColor"
+        android:textColor="@color/textColor"
         android:layout_marginBottom="39dp"
         android:layout_above="@+id/back_menu_button"
         android:layout_alignLeft="@+id/create_stat_speed"
@@ -87,6 +90,7 @@
         android:id="@+id/create_stat_life"
         android:hint="@string/add_monster_life"
         android:textColorHint="@color/textColor"
+        android:textColor="@color/textColor"
         android:layout_above="@+id/imageView7"
         android:layout_centerHorizontal="true" />
 
@@ -135,21 +139,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="35dp"
         android:textAllCaps="true"
-        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/textColor"
         android:padding="4dp"
-        android:textColor="#FFFFFF"
         android:id="@+id/pick_stats_text"
         android:textAlignment="center"/>
-
-    <Button
-        android:text="@string/back_menu_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/create_stat_stamina"
-        android:padding="@dimen/activity_vertical_margin"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/main_menu_button"
-        android:background="@color/colorPrimaryDark"/>
-
 
 </RelativeLayout>

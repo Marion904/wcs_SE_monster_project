@@ -1,22 +1,31 @@
 <resources>
+
+    <!-- common strings -->
     <string name="app_name">App_wcs_SE_monster_project</string>
     <string name="add_monster_txt">Ajouter un monstre</string>
     <string name="see_monster_txt">Voir mes monstres</string>
+
+    <!-- CreateMonsterActivity strings -->
     <string name="back_menu_button">Menu Principal</string>
-    <string name="back_list_button">Retourner à ma collection</string>
     <string name="add_monster_name">Entre le nom de ton monstre ici</string>
-    <string name="add_monster_type">Quel type de monstre souhaite-tu ajouter ?</string>
+    <string name="chose_type">Quel type de monstre veux-tu créer ?</string>
+    <string name="save_name">Je garde ce nom</string>
+
+    <!-- CreateMonster2 activity strings  -->
+    <string name="need_monster_name_toast">Tu dois donner un nom à ton monstre</string>
     <string name="add_monster_life">Vie</string>
     <string name="add_monster_power">Force</string>
     <string name="add_monster_speed">Vitesse</string>
     <string name="add_monster_stamina">Endurance</string>
-    <string name="chose_type">Quel type de monstre veux-tu créer ?</string>
     <string name="valider_create">Valider</string>
     <string name="back_create">Retour</string>
-    <string name="collection_title">Ma Collection de Monstres</string>
-    <string name="monter_name">Le nom de ton monstre</string>
     <string name="pick_stats_text">"Choisis les caractéristiques de "</string>
-    <string name="save_name">Je garde ce nom</string>
-    <string name="need_monster_name_toast">Tu dois donner un nom à ton monstre</string>
     <string name="stats_missing_toast">Tu dois donner des caractéristiques à ton monstre</string>
+
+    <!-- MonsterCollectionActivity strings -->
+    <string name="collection_title">Ma Collection de Monstres</string>
+
+    <!-- Monster_page strings -->
+    <string name="back_list_button">Retourner à ma collection</string>
+
 </resources>
