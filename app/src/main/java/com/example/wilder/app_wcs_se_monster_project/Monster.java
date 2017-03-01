@@ -9,17 +9,19 @@ import android.os.Parcelable;
 
 public class Monster {
     private String name;
-    private int type;
+    private String type;
+    private int type_index;
     private String life;
     private String power;
     private String speed;
     private String stamina;
-    private String[] typeSelector = {"Eau", "Feu", "Lumière", "Foudre", "Magie", "Nature", "Mort", "Metal", "Spécial"};
+
 
     //constructeur
-    public Monster (String name,int type, String life, String power, String speed, String stamina){
+    public Monster (String name,String type, int type_index, String life, String power, String speed, String stamina){
         this.name = name;
         this.type = type;
+        this.type_index = type_index;
         this.life=life;
         this.power = power;
         this.speed = speed;
@@ -30,7 +32,7 @@ public class Monster {
 
 
     public int getType(){
-        return this.type;
+        return this.type_index;
     }
     public String getLife(){
         return this.life;
@@ -51,7 +53,7 @@ public class Monster {
 
     public String toString(){
 
-        return this.name+" - "+typeSelector[this.type]+" - "+this.life+" - "+this.power+" - "+this.speed+" - "+this.stamina;
+        return this.name+" - "+this.type+" - "+this.life+" - "+this.power+" - "+this.speed+" - "+this.stamina;
     }
 
 }

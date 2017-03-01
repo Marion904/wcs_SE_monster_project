@@ -1,6 +1,7 @@
 package com.example.wilder.app_wcs_se_monster_project;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,15 +17,20 @@ public class MonsterCollectionActivity extends AppCompatActivity {
 
     Button back_to_menu;
     Button create;
-    Button delete;
     private static List<Monster> sMonsters = null;
     private ListView collection = null;
     private ArrayAdapter mAdapter = null;
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monster_collection);
+        Resources res = getResources();
+        String[] type_array = res.getStringArray(R.array.type_array);
         if (sMonsters == null) {
             sMonsters = new ArrayList<>();
         }
@@ -60,7 +66,7 @@ public class MonsterCollectionActivity extends AppCompatActivity {
             String stamina = intent.getStringExtra("stamina");
             String speed = intent.getStringExtra("speed");
 
-            Monster munch = new Monster(name, type, life, power, stamina, speed);
+            Monster munch = new Monster(name, type_array[type], type, life, power, stamina, speed);
 
             //String[] tableau={"Name - Type - Life - Power- Stamina - Speed"};
             // Create a List from String Array elements
