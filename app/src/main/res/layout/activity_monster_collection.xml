@@ -26,19 +26,32 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <ScrollView
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/collection"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/collection_title">
+        android:layout_marginBottom="15dp" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/relativeLayout2">
+    <Button
+        android:text="Create new monster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/create"
+        android:layout_alignBaseline="@+id/retour"
+        android:layout_alignBottom="@+id/retour"
+        android:layout_alignRight="@+id/collection_title"
+        android:layout_alignEnd="@+id/collection_title" />
 
-        </RelativeLayout>
-
-    </ScrollView>
+    <Button
+        android:text="Back to menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/retour"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/collection_title"
+        android:layout_alignLeft="@+id/collection_title"
+        android:layout_alignStart="@+id/collection_title" />
 
 </RelativeLayout>
