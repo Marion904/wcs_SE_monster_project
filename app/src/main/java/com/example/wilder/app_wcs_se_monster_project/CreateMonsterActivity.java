@@ -97,7 +97,7 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
 
     public void onClick(View v) {
 
-        Integer type;
+        int type;
         String name = add_monster_name_edit.getText().toString();
         Intent next_creation = new Intent(CreateMonsterActivity.this, CreateMonster2.class);
 

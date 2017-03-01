@@ -7,14 +7,15 @@ package com.example.wilder.app_wcs_se_monster_project;
 
 public class Monster {
     private String name;
-    private String type;
+    private int type;
     private String life;
     private String power;
     private String speed;
     private String stamina;
+    private String[] typeSelector = {"Eau", "Feu", "Lumière", "Foudre", "Magie", "Nature", "Mort", "Metal", "Spécial"};
 
     //constructeur
-    public Monster (String name,String type, String life, String power, String speed, String stamina){
+    public Monster (String name,int type, String life, String power, String speed, String stamina){
         this.name = name;
         this.type = type;
         this.life=life;
@@ -26,7 +27,8 @@ public class Monster {
     //getter
 
     public String toString(){
-        return this.name+" - "+this.type+" - "+this.life+" - "+this.power+" - "+this.speed+" - "+this.stamina;
+
+        return this.name+" - "+typeSelector[this.type]+" - "+this.life+" - "+this.power+" - "+this.speed+" - "+this.stamina;
     }
 
 }

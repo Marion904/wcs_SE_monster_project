@@ -24,7 +24,7 @@ public class CreateMonster2 extends AppCompatActivity {
 
         Intent next_creation = getIntent();
         final String name = next_creation.getStringExtra("name");
-        final String type = next_creation.getStringExtra("type");
+        final int type = next_creation.getIntExtra("type", 0);
 
         TextView pick_stats_text = (TextView) findViewById(R.id.pick_stats_text);   //changes the text view to display name of created monster
         pick_stats_text.setText(getString(R.string.pick_stats_text) + name);
@@ -58,7 +58,7 @@ public class CreateMonster2 extends AppCompatActivity {
                 stamina = create_stat_stamina.getText().toString();
                 speed = create_stat_speed.getText().toString();
 
-                if (life.length()!=0 || power.length()!=0 || stamina.length()!=0 || speed.length()!=0) {
+                if (life.length()!=0 && power.length()!=0 && stamina.length()!=0 && speed.length()!=0) {
 
                    // Toast.makeText(CreateMonster2.this, "Félicitations pour la création de ton monste !!", Toast.LENGTH_SHORT).show();
                     Intent intent_create = new Intent(CreateMonster2.this, MonsterCollectionActivity.class);

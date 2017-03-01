@@ -52,7 +52,7 @@ public class MonsterCollectionActivity extends AppCompatActivity {
         Intent intent = getIntent();
         if(intent.hasExtra("name")){
             String name = intent.getStringExtra("name");
-            String type = intent.getStringExtra("type");
+            int type = intent.getIntExtra("type", 0);
             String life = intent.getStringExtra("life");
             String power = intent.getStringExtra("power");
             String stamina =intent.getStringExtra("stamina");
