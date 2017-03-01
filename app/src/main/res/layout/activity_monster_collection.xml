@@ -26,19 +26,15 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <ScrollView
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/collection_title">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/relativeLayout2">
-
-        </RelativeLayout>
-
-    </ScrollView>
+        android:layout_below="@+id/collection_title"
+        android:layout_alignLeft="@+id/collection_title"
+        android:layout_alignStart="@+id/collection_title"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="29dp"
+        android:id="@+id/monster_list"/>
 
 </RelativeLayout>
