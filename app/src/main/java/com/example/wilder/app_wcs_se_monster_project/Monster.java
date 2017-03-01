@@ -1,6 +1,8 @@
 package com.example.wilder.app_wcs_se_monster_project;
 
 
+import android.os.Parcelable;
+
 /**
  * Created by wilder on 01/03/17.
  */
@@ -25,6 +27,27 @@ public class Monster {
     }
 
     //getter
+
+
+    public int getType(){
+        return this.type;
+    }
+    public String getLife(){
+        return this.life;
+    }
+    public String getPower(){
+        return this.power;
+    }
+    public String getSpeed(){
+        return this.speed;
+    }
+    public String getStamina(){
+        return this.stamina;
+    }
+
+    public String getName() {
+        return  this.name;
+    }
 
     public String toString(){
 

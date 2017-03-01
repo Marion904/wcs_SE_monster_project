@@ -60,7 +60,6 @@ public class CreateMonster2 extends AppCompatActivity {
 
                 if (life.length()!=0 && power.length()!=0 && stamina.length()!=0 && speed.length()!=0) {
 
-                   // Toast.makeText(CreateMonster2.this, "Félicitations pour la création de ton monste !!", Toast.LENGTH_SHORT).show();
                     Intent intent_create = new Intent(CreateMonster2.this, MonsterCollectionActivity.class);
                     intent_create.putExtra("name", name);
                     intent_create.putExtra("type", type);

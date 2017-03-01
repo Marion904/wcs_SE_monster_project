@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent see_monster_intent =  new Intent(MainActivity.this, MonsterCollectionActivity.class);
+                see_monster_intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivity(see_monster_intent);
             }
         });
