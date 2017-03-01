@@ -9,8 +9,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 public class CreateMonster2 extends AppCompatActivity {
 
     Button valider_create_button;
@@ -95,7 +93,6 @@ public class CreateMonster2 extends AppCompatActivity {
 
 
     }
-
 
 
 }

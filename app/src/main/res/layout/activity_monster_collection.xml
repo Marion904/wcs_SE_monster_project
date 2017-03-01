@@ -35,33 +35,23 @@
         android:layout_marginBottom="15dp" />
 
     <Button
-        android:text="Button"
+        android:text="Create new monster"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button3"
+        android:id="@+id/create"
+        android:layout_alignBaseline="@+id/retour"
+        android:layout_alignBottom="@+id/retour"
+        android:layout_alignRight="@+id/collection_title"
+        android:layout_alignEnd="@+id/collection_title" />
+
+    <Button
+        android:text="Back to menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/retour"
+        android:layout_marginTop="16dp"
         android:layout_below="@+id/collection_title"
         android:layout_alignLeft="@+id/collection_title"
-        android:layout_alignStart="@+id/collection_title"
-        android:layout_marginTop="31dp" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button4"
-        android:layout_alignRight="@+id/collection_title"
-        android:layout_alignEnd="@+id/collection_title"
-        android:layout_marginRight="14dp"
-        android:layout_marginEnd="14dp"
-        android:id="@+id/button5" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button4"
-        android:layout_alignBaseline="@+id/button3"
-        android:layout_alignBottom="@+id/button3"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignStart="@+id/collection_title" />
 
 </RelativeLayout>
