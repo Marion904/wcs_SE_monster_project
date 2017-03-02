@@ -11,36 +11,55 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.wilder.app_wcs_se_monster_project.Monster_Page">
 
-    <ImageView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/type_image"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"/>
+        android:id="@+id/header"
+        android:layout_centerHorizontal="true">
 
-    <TextView
-        android:text=""
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/type_text"
-        android:layout_alignParentTop="true" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/type_image"
+            app:srcCompat="@drawable/eau"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/type_text"
+            android:textColor="@color/textColor"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:padding="@dimen/activity_vertical_margin"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="37dp" />
+
+    </RelativeLayout>
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:layout_below="@+id/type_image"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/relativeLayout">
+
+        android:id="@+id/relativeLayout2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <Button
             android:id="@+id/back_menu_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:background="@color/colorPrimaryDark"
-            android:text="@string/back_menu_button"/>
+            android:text="@string/back_menu_button"
+            android:layout_above="@+id/back_collection_button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <Button
             android:layout_width="match_parent"
@@ -48,119 +67,105 @@
             android:background="@color/colorPrimaryDark"
             android:text="@string/back_list_button"
             android:id="@+id/back_collection_button"
+            android:layout_marginBottom="11dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:text="@string/suppress_button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/suppress_button"
+            android:background="@color/colorPrimaryDark"
             android:layout_above="@+id/back_menu_button"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="16dp" />
-
-        <TextView
-            android:text=""
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:id="@+id/textView2"
-            android:layout_above="@+id/button"
-            android:layout_centerHorizontal="true" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
-
-        <TextView
-            android:id="@+id/stat_life_text"
-            android:text="@string/add_monster_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="54dp"
-            android:textColor="@color/textColor"/>
-
-        <ImageView
-            android:id="@+id/stat_life_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/stat_life"
-            android:layout_alignBottom="@+id/stat_life_text"
-            android:layout_toLeftOf="@+id/stat_life_text"
-            android:layout_toStartOf="@+id/stat_life_text" />
-
-        <TextView
-            android:id="@+id/stat_power_text"
-            android:text="@string/add_monster_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/stat_life_text"
-            android:textColor="@color/textColor"/>
+            android:layout_marginBottom="15dp" />
 
         <ImageView
             android:id="@+id/stat_power_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/stat_power"
-            android:layout_below="@+id/stat_life_text"
-            android:layout_toLeftOf="@+id/stat_power_text"
-            android:layout_toStartOf="@+id/stat_power_text"
-            android:layout_marginTop="25dp" />
+            android:layout_above="@+id/stat_speed_img"
+            android:layout_alignLeft="@+id/stat_speed_img"
+            android:layout_alignStart="@+id/stat_speed_img" />
 
-        <TextView
-            android:id="@+id/stat_speed_text"
-            android:text="@string/add_monster_txt"
+        <ImageView
+        android:id="@+id/stat_stamina_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/stat_stamina"
+            android:layout_marginBottom="16dp"
+            android:layout_above="@+id/suppress_button"
+            android:layout_alignLeft="@+id/suppress_button"
+            android:layout_alignStart="@+id/suppress_button" />
+
+        <ImageView
+            android:id="@+id/stat_life_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_below="@+id/stat_power_text"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/textColor"/>
+            app:srcCompat="@drawable/stat_life"
+            android:layout_above="@+id/stat_power_img"
+            android:layout_alignLeft="@+id/stat_power_img"
+            android:layout_alignStart="@+id/stat_power_img" />
+
+        <TextView
+        android:id="@+id/stat_life_text"
+        android:text=""
+        android:layout_width="150dp"
+        android:textAlignment="center"
+        android:textSize="@dimen/monster_name"
+        android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:layout_above="@+id/stat_power_img"
+            android:layout_centerHorizontal="true" />
 
         <ImageView
             android:id="@+id/stat_speed_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/stat_speed"
-            android:layout_below="@id/stat_power_text"
-            android:layout_toLeftOf="@+id/stat_speed_text"
-            android:layout_toStartOf="@+id/stat_speed_text"
-            android:layout_marginTop="25dp" />
+            android:layout_above="@+id/stat_stamina_img"
+            android:layout_alignLeft="@+id/stat_stamina_img"
+            android:layout_alignStart="@+id/stat_stamina_img" />
+
+        <TextView
+            android:id="@+id/stat_speed_text"
+            android:text=""
+            android:layout_width="150dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/monster_name"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:layout_above="@+id/stat_stamina_img"
+            android:layout_alignLeft="@+id/stat_life_text"
+            android:layout_alignStart="@+id/stat_life_text" />
 
         <TextView
             android:id="@+id/stat_stamina_text"
-            android:text="@string/add_monster_txt"
-            android:layout_width="wrap_content"
+            android:text=""
+            android:layout_width="150dp"
+            android:textAlignment="center"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_below="@+id/stat_speed_text"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/textColor"/>
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/monster_name"
+            android:layout_alignBottom="@+id/stat_stamina_img"
+            android:layout_alignLeft="@+id/stat_speed_text"
+            android:layout_alignStart="@+id/stat_speed_text" />
 
-        <ImageView
-            android:id="@+id/stat_stamina_img"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/stat_power_text"
+            android:text=""
+            android:layout_width="150dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/monster_name"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/stat_stamina"
-            android:layout_below="@id/stat_speed_text"
-            android:layout_toLeftOf="@+id/stat_stamina_text"
-            android:layout_toStartOf="@+id/stat_stamina_text"
-            android:layout_marginTop="25dp" />
+            android:textColor="@color/textColor"
+            android:layout_above="@+id/stat_speed_img"
+            android:layout_alignLeft="@+id/stat_life_text"
+            android:layout_alignStart="@+id/stat_life_text" />
 
-        </RelativeLayout>
 
     </RelativeLayout>
-
-    <TextView
-        android:text=""
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/monster_name"
-        android:textStyle="bold"
-        android:textSize="@dimen/monster_name"
-        android:textColor="@color/textColor"
-        android:layout_above="@+id/relativeLayout"
-        android:layout_centerHorizontal="true" />
-
-
 </RelativeLayout>

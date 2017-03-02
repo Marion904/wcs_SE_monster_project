@@ -28,7 +28,7 @@ public class Monster_Page extends AppCompatActivity {
         */
         String name = show.getName();
         int type = show.getType();
-        String type_textz = show.getType_text();
+        String type_text = show.getType_text();
         String life = show.getLife();
         String power = show.getPower();
         String speed = show.getSpeed();
@@ -44,17 +44,17 @@ public class Monster_Page extends AppCompatActivity {
         TextView stat_power_text = (TextView) findViewById(R.id.stat_power_text);
         TextView stat_speed_text = (TextView) findViewById(R.id.stat_speed_text);
         TextView stat_stamina_text = (TextView) findViewById(R.id.stat_stamina_text);
-        TextView type_text = (TextView) findViewById(R.id.type_text);
+        TextView type_textView = (TextView) findViewById(R.id.type_text);
 
-        //replacing textViews content with strings from intent and displaying stats
-        type_text.setText(type_textz);
+        //replacing textViews content with strings from intent and XML and displaying stats
+        type_textView.setText(getString(R.string.monster_type_text) + type_text);
         stat_life_text.setText(life);
         stat_power_text.setText(power);
         stat_speed_text.setText(speed);
         stat_stamina_text.setText(stamina);
 
         //setting title of the page to monster's name
-        this.setTitle(name);
+        this.setTitle(getString(R.string.title_text) + name);
 
         //declaring imageView to set content based on monster's type
         ImageView monsterType = (ImageView) findViewById(R.id.type_image);

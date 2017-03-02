@@ -38,6 +38,9 @@
 
 
     <!-- Monster_page strings -->
+    <string name="suppress_button_text">Supprimer ce monstre</string>
+    <string name="title_text">"Profil détaillé de "</string>
     <string name="back_list_button">Retourner à ma collection</string>
+    <string name="monster_type_text">"Ce monstre est de type "</string>
 
 </resources>
