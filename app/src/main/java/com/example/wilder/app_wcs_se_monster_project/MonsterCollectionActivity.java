@@ -17,7 +17,6 @@ public class MonsterCollectionActivity extends AppCompatActivity {
 
     Button back_to_menu;
     Button create;
-    Button delete;
     private static List<Monster> sMonsters = null;
     private ListView collection = null;
     private ArrayAdapter mAdapter = null;
@@ -63,19 +62,13 @@ public class MonsterCollectionActivity extends AppCompatActivity {
             String stamina = intent.getStringExtra("stamina");
             String speed = intent.getStringExtra("speed");
 
-            Monster munch = new Monster(name, type, type_array[type], life, power, stamina, speed);
+            Monster munch = new Monster(name, type, type_array[type], life, power, speed, stamina);
 
-            //String[] tableau={"Name - Type - Life - Power- Stamina - Speed"};
-            // Create a List from String Array elements
             this.sMonsters.add(munch);
             this.mAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, sMonsters);
 
             // DataBind ListView with items from ArrayAdapter
             this.collection.setAdapter(this.mAdapter);
-            //List <String> collection = new ArrayList<>(Arrays.asList(tableau));
-
-            // Create an ArrayAdapter from List
-            //final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, collection);
 
 
             //mAdapter.notifyDataSetChanged();
@@ -87,28 +80,25 @@ public class MonsterCollectionActivity extends AppCompatActivity {
                     Monster clickedMonster = (Monster) mAdapter.getItem(position);
 
                     monsterProfile.putExtra("Monster",clickedMonster);
-/*
-                    String name = clickedMonster.getName();
-                    String life = clickedMonster.getLife();
-                    String power = clickedMonster.getPower();
-                    String speed = clickedMonster.getSpeed();
-                    String stamina = clickedMonster.getStamina();
-                    int type = clickedMonster.getType();
+                    monsterProfile.putExtra("position",position);
 
-
-                    monsterProfile.putExtra("name", name);
-                    monsterProfile.putExtra("life", life);
-                    monsterProfile.putExtra("power", power);
-                    monsterProfile.putExtra("speed", speed);
-                    monsterProfile.putExtra("stamina", stamina);
-                    monsterProfile.putExtra("type", type);
-                    */
 
                     startActivity(monsterProfile);
 
                 }
             });
 
+        }else{
+            this.mAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, sMonsters);
+            // DataBind ListView with items from ArrayAdapter
+            this.collection.setAdapter(this.mAdapter);
+            Intent delete=getIntent();
+            if (delete.hasExtra("position_to_delete")) {
+                int positionToRemove = delete.getIntExtra("position_to_delete", 0);
+                this.sMonsters.remove(positionToRemove);
+
+            }
+            collection.invalidateViews();
         }
 
     }
