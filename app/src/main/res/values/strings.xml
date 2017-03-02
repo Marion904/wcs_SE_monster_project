@@ -43,4 +43,11 @@
     <string name="back_list_button">Retourner à ma collection</string>
     <string name="monster_type_text">"Ce monstre est de type "</string>
 
+    <!-- abd String -->
+    <string name="title">Supprimer ? </string>
+    <string name="confirm">"Es-tu certain de vouloir supprimer "</string>
+    <string name="interro">" ?"</string>
+    <string name ="annuler">Annuler</string>
+    <string name="ok">Ok</string>
+
 </resources>

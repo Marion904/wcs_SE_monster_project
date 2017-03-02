@@ -122,10 +122,10 @@ public class Monster_Page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder adb = new AlertDialog.Builder(Monster_Page.this);
-                adb.setTitle("Delete?");
-                adb.setMessage("Are you sure you want to delete " + name);
-                adb.setNegativeButton("Cancel", null);
-                adb.setPositiveButton("Ok", new AlertDialog.OnClickListener() {
+                adb.setTitle(getString(R.string.title));
+                adb.setMessage(getString(R.string.confirm)+ name+getString(R.string.interro));
+                adb.setNegativeButton(getString(R.string.annuler), null);
+                adb.setPositiveButton(getString(R.string.ok), new AlertDialog.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Intent delete = new Intent(Monster_Page.this, MonsterCollectionActivity.class);
