@@ -45,7 +45,8 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="23dp"
         android:textColor="@color/textColor"
-        android:textAlignment="gravity" />
+        android:textAlignment="gravity"
+        android:background="@color/colorPrimaryDark"/>
 
     <Button
         android:text="@string/back_menu_button"
