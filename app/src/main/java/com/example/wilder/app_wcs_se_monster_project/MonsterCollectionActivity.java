@@ -57,10 +57,15 @@ public class MonsterCollectionActivity extends AppCompatActivity {
         if (intent.hasExtra("name")) {
             String name = intent.getStringExtra("name");
             int type = intent.getIntExtra("type", 0);
-            String life = intent.getStringExtra("life");
-            String power = intent.getStringExtra("power");
-            String stamina = intent.getStringExtra("stamina");
-            String speed = intent.getStringExtra("speed");
+            //float life = intent.getStringExtra("life");
+            Bundle bundle = getIntent().getExtras();
+            float life = bundle.getFloat("life");
+            //String power = intent.getStringExtra("power");
+            float power = bundle.getFloat("power");
+          //  String stamina = intent.getStringExtra("stamina");
+            float stamina = bundle.getFloat("stamina");
+//            String speed = intent.getStringExtra("speed");
+            float speed = bundle.getFloat("speed");
 
             Monster munch = new Monster(name, type, type_array[type], life, power, speed, stamina);
 

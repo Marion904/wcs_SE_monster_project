@@ -6,16 +6,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class CreateMonster2 extends AppCompatActivity {
 
     Button valider_create_button;
-    static String life;
-    static String power;
-    static String stamina;
-    static String speed;
+    static float life;
+    static float power;
+    static float stamina;
+    static float speed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,10 +39,10 @@ public class CreateMonster2 extends AppCompatActivity {
         valider_create_button= (Button) findViewById(R.id.valider_create_button);
 
         //declaring edit text to get monster stats
-        final EditText create_stat_life = (EditText) findViewById(R.id.create_stat_life);
-        final EditText create_stat_power = (EditText) findViewById(R.id.create_stat_power);
-        final EditText create_stat_speed = (EditText) findViewById(R.id.create_stat_speed);
-        final EditText create_stat_stamina = (EditText) findViewById(R.id.create_stat_stamina);
+        final RatingBar create_stat_life = (RatingBar) findViewById(R.id.create_stat_life);
+        final RatingBar create_stat_power = (RatingBar) findViewById(R.id.create_stat_power);
+        final RatingBar create_stat_speed = (RatingBar) findViewById(R.id.create_stat_speed);
+        final RatingBar create_stat_stamina = (RatingBar) findViewById(R.id.create_stat_stamina);
 
         //activating onClick for the back menu button
         back_menu_button.setOnClickListener(new View.OnClickListener() {  //second one, brings back to previous page
@@ -59,14 +60,14 @@ public class CreateMonster2 extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                life = create_stat_life.getText().toString();
-                power = create_stat_power.getText().toString();
-                stamina = create_stat_stamina.getText().toString();
-                speed = create_stat_speed.getText().toString();
+                life = create_stat_life.getRating();
+                power = create_stat_power.getRating();
+                stamina = create_stat_stamina.getRating();
+                speed = create_stat_speed.getRating();
 
                 //checking if all editText fields are filled, then starting new activity, else displaying a toast
 
-                if (life.length()!=0 && power.length()!=0 && stamina.length()!=0 && speed.length()!=0) {
+                if (life!=0.0 && power!=0.0 && stamina!=0. && speed!=0.0) {
 
                     Intent intent_create = new Intent(CreateMonster2.this, MonsterCollectionActivity.class);
                     intent_create.putExtra("name", name);

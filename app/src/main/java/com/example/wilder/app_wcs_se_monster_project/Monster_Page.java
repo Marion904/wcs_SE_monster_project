@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 public class Monster_Page extends AppCompatActivity {
@@ -26,10 +27,10 @@ public class Monster_Page extends AppCompatActivity {
         final String name = show.getName();
         int type = show.getType();
         String type_text = show.getType_text();
-        String life = show.getLife();
-        String power = show.getPower();
-        String speed = show.getSpeed();
-        String stamina = show.getStamina();
+        float life = show.getLife();
+        float power = show.getPower();
+        float speed = show.getSpeed();
+        float stamina = show.getStamina();
 
 
         //declaring both buttons to be used with onClick later
@@ -38,18 +39,18 @@ public class Monster_Page extends AppCompatActivity {
         Button supress_button = (Button) findViewById(R.id.suppress_button);
 
         //declaring all textViews to use .setText later
-        TextView stat_life_text = (TextView) findViewById(R.id.stat_life_text);
-        TextView stat_power_text = (TextView) findViewById(R.id.stat_power_text);
-        TextView stat_speed_text = (TextView) findViewById(R.id.stat_speed_text);
-        TextView stat_stamina_text = (TextView) findViewById(R.id.stat_stamina_text);
+        RatingBar stat_life_text = (RatingBar) findViewById(R.id.stat_life_text);
+        RatingBar stat_power_text = (RatingBar) findViewById(R.id.stat_power_text);
+        RatingBar stat_speed_text = (RatingBar) findViewById(R.id.stat_speed_text);
+        RatingBar stat_stamina_text = (RatingBar) findViewById(R.id.stat_stamina_text);
         TextView type_textView = (TextView) findViewById(R.id.type_text);
 
-        //replacing textViews content with strings from intent and XML and displaying stats
+        //rating RatingBars  with the number of stars from intent and XML and displaying stats
         type_textView.setText(getString(R.string.monster_type_text) + type_text);
-        stat_life_text.setText(life);
-        stat_power_text.setText(power);
-        stat_speed_text.setText(speed);
-        stat_stamina_text.setText(stamina);
+        stat_life_text.setRating(life);
+        stat_power_text.setRating(power);
+        stat_speed_text.setRating(speed);
+        stat_stamina_text.setRating(stamina);
 
         //setting title of the page to monster's name
         this.setTitle(getString(R.string.title_text) + name);

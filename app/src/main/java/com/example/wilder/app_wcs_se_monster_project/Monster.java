@@ -8,13 +8,13 @@ public class Monster implements Parcelable{
     private String name;
     private int type;
     private String type_text;
-    private String life;
-    private String power;
-    private String speed;
-    private String stamina;
+    private float life;
+    private float power;
+    private float speed;
+    private float stamina;
 
     //constructeur
-    public Monster (String name,int type, String type_text, String life, String power, String speed, String stamina){
+    public Monster (String name,int type, String type_text, float life, float power, float speed, float stamina){
         this.name = name;
         this.type = type;
         this.type_text = type_text;
@@ -28,10 +28,10 @@ public class Monster implements Parcelable{
         name = in.readString();
         type = in.readInt();
         type_text = in.readString();
-        life = in.readString();
-        power = in.readString();
-        speed = in.readString();
-        stamina = in.readString();
+        life = in.readFloat();
+        power = in.readFloat();
+        speed = in.readFloat();
+        stamina = in.readFloat();
     }
 
     public static final Creator<Monster> CREATOR = new Creator<Monster>() {
@@ -53,16 +53,16 @@ public class Monster implements Parcelable{
     public String getType_text(){
         return this.type_text;
     }
-    public String getLife(){
+    public float getLife(){
         return this.life;
     }
-    public String getPower(){
+    public float getPower(){
         return this.power;
     }
-    public String getSpeed(){
+    public float getSpeed(){
         return this.speed;
     }
-    public String getStamina(){
+    public float getStamina(){
         return this.stamina;
     }
 
@@ -85,9 +85,9 @@ public class Monster implements Parcelable{
         dest.writeString(name);
         dest.writeInt(type);
         dest.writeString(type_text);
-        dest.writeString(life);
-        dest.writeString(power);
-        dest.writeString(speed);
-        dest.writeString(stamina);
+        dest.writeFloat(life);
+        dest.writeFloat(power);
+        dest.writeFloat(speed);
+        dest.writeFloat(stamina);
     }
 }

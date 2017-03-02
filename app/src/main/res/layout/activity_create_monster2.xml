@@ -32,20 +32,11 @@
         android:id="@+id/valider_create_button"
         android:background="@color/colorPrimaryDark"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/stat_stamina"
-        android:id="@+id/imageView9"
-        android:layout_below="@+id/imageView8"
-        android:layout_alignLeft="@+id/imageView8"
-        android:layout_alignStart="@+id/imageView8" />
 
-    <EditText
+    <!--
+    <SeekBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
         android:id="@+id/create_stat_life"
         android:hint="@string/add_monster_life"
         android:textColorHint="@color/textColor"
@@ -58,6 +49,20 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
+        android:id="@+id/create_stat_life"
+        android:hint="@string/add_monster_life"
+        android:textColorHint="@color/textColor"
+        android:textColor="@color/textColor"
+        android:layout_above="@+id/imageView7"
+        android:layout_centerHorizontal="true" />
+        -->
+
+    <!--
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
         android:id="@+id/create_stat_speed"
         android:hint="@string/add_monster_speed"
         android:textColorHint="@color/textColor"
@@ -65,7 +70,9 @@
         android:layout_below="@+id/imageView7"
         android:layout_alignLeft="@+id/create_stat_power"
         android:layout_alignStart="@+id/create_stat_power" />
+        -->
 
+    <!--
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -80,34 +87,7 @@
         android:layout_alignLeft="@+id/create_stat_speed"
         android:layout_alignStart="@+id/create_stat_speed" />
 
-
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/stat_power"
-        android:id="@+id/imageView7"
-        android:layout_alignTop="@+id/create_stat_power"
-        android:layout_toLeftOf="@+id/create_stat_power"
-        android:layout_toStartOf="@+id/create_stat_power" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/stat_life"
-        android:id="@+id/imageView6"
-        android:layout_alignTop="@+id/create_stat_life"
-        android:layout_toLeftOf="@+id/create_stat_power"
-        android:layout_toStartOf="@+id/create_stat_power" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/stat_speed"
-        android:id="@+id/imageView8"
-        android:layout_below="@+id/imageView7"
-        android:layout_toLeftOf="@+id/create_stat_speed"
-        android:layout_toStartOf="@+id/create_stat_speed" />
+-->
 
     <ImageView
         android:layout_width="wrap_content"
@@ -118,7 +98,17 @@
         android:layout_above="@+id/create_stat_life"
         android:layout_alignLeft="@+id/imageView6"
         android:layout_alignStart="@+id/imageView6" />
-
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/create_stat_stamina"
+        android:hint="@string/add_monster_stamina"
+        android:textColorHint="@color/textColor"
+        android:textColor="@color/textColor"
+        android:layout_marginBottom="39dp"
+        android:layout_above="@+id/back_menu_button"
+        android:layout_alignLeft="@+id/create_stat_speed"
+        android:layout_alignStart="@+id/create_stat_speed" />
     <TextView
         android:text="@string/pick_stats_text"
         android:layout_width="wrap_content"
@@ -132,6 +122,77 @@
         android:id="@+id/pick_stats_text"
         android:textAlignment="center"/>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/stat_stamina"
+        android:id="@+id/imageView9"
+        android:layout_alignBottom="@+id/create_stat_stamina"
+        android:layout_toLeftOf="@+id/create_stat_stamina"
+        android:layout_toStartOf="@+id/create_stat_stamina" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/stat_power"
+        android:id="@+id/imageView7"
+        android:layout_alignTop="@+id/create_stat_power"
+        android:layout_toLeftOf="@+id/create_stat_power"
+        android:layout_toStartOf="@+id/create_stat_power" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/create_stat_life"
+        android:hint="@string/add_monster_life"
+        android:textColorHint="@color/textColor"
+        android:textColor="@color/textColor"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/create_stat_power"
+        android:layout_alignLeft="@+id/pick_stats_text"
+        android:layout_alignStart="@+id/pick_stats_text" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/stat_life"
+        android:id="@+id/imageView6"
+        android:layout_alignBottom="@+id/create_stat_life"
+        android:layout_toLeftOf="@+id/create_stat_life"
+        android:layout_toStartOf="@+id/create_stat_life" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/create_stat_power"
+        android:hint="@string/add_monster_power"
+        android:textColorHint="@color/textColor"
+        android:textColor="@color/textColor"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/create_stat_speed"
+        android:hint="@string/add_monster_speed"
+        android:textColorHint="@color/textColor"
+        android:textColor="@color/textColor"
+        android:layout_above="@+id/create_stat_stamina"
+        android:layout_alignLeft="@+id/create_stat_power"
+        android:layout_alignStart="@+id/create_stat_power"
+        android:layout_marginBottom="11dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/stat_speed"
+        android:id="@+id/imageView8"
+        android:layout_alignTop="@+id/create_stat_speed"
+        android:layout_toLeftOf="@+id/create_stat_speed"
+        android:layout_toStartOf="@+id/create_stat_speed"
+        android:layout_alignBottom="@+id/create_stat_speed" />
+    <!--
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -145,5 +206,5 @@
         android:layout_above="@+id/create_stat_stamina"
         android:layout_alignLeft="@+id/create_stat_life"
         android:layout_alignStart="@+id/create_stat_life" />
-
+-->
 </RelativeLayout>
