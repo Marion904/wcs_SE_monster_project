@@ -24,6 +24,18 @@
 
     <!-- MonsterCollectionActivity strings -->
     <string name="collection_title">Ma Collection de Monstres</string>
+    <string-array name="type_array">
+        <item>Eau</item>
+        <item>Feu</item>
+        <item>Lumière</item>
+        <item>Foudre</item>
+        <item>Magie</item>
+        <item>Nature</item>
+        <item>Mort</item>
+        <item>Métal</item>
+        <item>Special</item>
+    </string-array>
+
 
     <!-- Monster_page strings -->
     <string name="back_list_button">Retourner à ma collection</string>
