@@ -1,12 +1,6 @@
 package com.example.wilder.app_wcs_se_monster_project;
 
-
-import android.os.Parcelable;
-
-/**
- * Created by wilder on 01/03/17.
- */
-
+//creating class Monster so it's attributes can be passed between different activities and displayed
 public class Monster {
     private String name;
     private int type;
@@ -20,15 +14,13 @@ public class Monster {
     public Monster (String name,int type, String life, String power, String speed, String stamina){
         this.name = name;
         this.type = type;
-        this.life=life;
+        this.life = life;
         this.power = power;
         this.speed = speed;
         this.stamina = stamina;
     }
 
     //getter
-
-
     public int getType(){
         return this.type;
     }

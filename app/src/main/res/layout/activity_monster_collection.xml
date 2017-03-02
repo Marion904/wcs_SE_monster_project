@@ -43,7 +43,9 @@
         android:layout_below="@+id/collection_title"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="23dp" />
+        android:layout_marginTop="23dp"
+        android:textColor="@color/textColor"
+        android:textAlignment="gravity" />
 
     <Button
         android:text="@string/back_menu_button"

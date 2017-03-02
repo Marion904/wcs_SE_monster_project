@@ -83,7 +83,6 @@ public class MonsterCollectionActivity extends AppCompatActivity {
                     Intent monsterProfile = new Intent(MonsterCollectionActivity.this, Monster_Page.class);
                     Monster clickedMonster = (Monster) mAdapter.getItem(position);
 
-                    clickedMonster.toString();
                     String name = clickedMonster.getName();
                     String life = clickedMonster.getLife();
                     String power = clickedMonster.getPower();

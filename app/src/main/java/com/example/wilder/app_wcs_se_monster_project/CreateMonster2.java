@@ -26,20 +26,24 @@ public class CreateMonster2 extends AppCompatActivity {
         final String name = next_creation.getStringExtra("name");
         final int type = next_creation.getIntExtra("type", 0);
 
-        TextView pick_stats_text = (TextView) findViewById(R.id.pick_stats_text);   //changes the text view to display name of created monster
+
+        //textView that changes based on the name chosed for the monster
+        TextView pick_stats_text = (TextView) findViewById(R.id.pick_stats_text);
         pick_stats_text.setText(getString(R.string.pick_stats_text) + name);
 
-           //buttons with events handler to navigate the app
+        //button with events handler to get back to menu
         final Button back_menu_button = (Button) findViewById(R.id.back_menu_button);
+
+        //button to finalize monster creation
         valider_create_button= (Button) findViewById(R.id.valider_create_button);
 
-
+        //declaring edit text to get monster stats
         final EditText create_stat_life = (EditText) findViewById(R.id.create_stat_life);
         final EditText create_stat_power = (EditText) findViewById(R.id.create_stat_power);
         final EditText create_stat_speed = (EditText) findViewById(R.id.create_stat_speed);
         final EditText create_stat_stamina = (EditText) findViewById(R.id.create_stat_stamina);
 
-
+        //activating onClick for the back menu button
         back_menu_button.setOnClickListener(new View.OnClickListener() {  //second one, brings back to previous page
             @Override
             public void onClick(View v) {
@@ -48,6 +52,8 @@ public class CreateMonster2 extends AppCompatActivity {
                 startActivity(back_create);
             }
         });
+
+        //activating onClick for the "done" button
         valider_create_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,6 +63,8 @@ public class CreateMonster2 extends AppCompatActivity {
                 power = create_stat_power.getText().toString();
                 stamina = create_stat_stamina.getText().toString();
                 speed = create_stat_speed.getText().toString();
+
+                //checking if all editText fields are filled, then starting new activity, else displaying a toast
 
                 if (life.length()!=0 && power.length()!=0 && stamina.length()!=0 && speed.length()!=0) {
 

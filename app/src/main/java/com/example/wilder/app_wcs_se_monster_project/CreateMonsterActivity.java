@@ -12,15 +12,9 @@ import android.widget.Toast;
 
 public class CreateMonsterActivity extends AppCompatActivity implements View.OnClickListener {
 
-    //declaring editText name so i can use it later in onClick method.
-
-    //PENSE A .getDrawable pour envoyer une image direct dans l'intent
+    //declaring editText name so it can be used it later in onClick method.
 
     EditText add_monster_name_edit;
-    /*EditText create_stat_life = (EditText) findViewById(R.id.create_stat_life);
-    EditText create_stat_power = (EditText) findViewById(R.id.create_stat_power);
-    EditText create_stat_speed = (EditText) findViewById(R.id.create_stat_speed);
-    EditText create_stat_stamina = (EditText) findViewById(R.id.create_stat_stamina);*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,15 +42,18 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
         ImageButton nature_image_button = (ImageButton) findViewById(R.id.nature_image_button);
             nature_image_button.setOnClickListener(this);
 
-
-        final RelativeLayout buttons_layout = (RelativeLayout) findViewById(R.id.buttons_layout); //declaring and hiding buttons layout to show when edit text is filled
+        //declaring and hiding buttons layout to display only when edit text is filled
+        final RelativeLayout buttons_layout = (RelativeLayout) findViewById(R.id.buttons_layout);
             buttons_layout.setVisibility(View.INVISIBLE);
 
-        add_monster_name_edit = (EditText) findViewById(R.id.add_monster_name_edit);  //defining monster name when onCreate is running
+        //defining monster name when onCreate is running
+        add_monster_name_edit = (EditText) findViewById(R.id.add_monster_name_edit);
 
-        final Button save_name_button = (Button) findViewById(R.id.save_name_button); //creating and adding a clickListener to the "save name" button
-        final Button main_menu_button = (Button) findViewById(R.id.main_menu_button); //same for the "back_menu_button
+        //defining both buttons
+        final Button save_name_button = (Button) findViewById(R.id.save_name_button);
+        final Button main_menu_button = (Button) findViewById(R.id.main_menu_button);
 
+        //onClick on main menu button, go back to main menu
         main_menu_button.setOnClickListener(new View.OnClickListener() {  //first event handler brings back to main menu
             @Override
             public void onClick(View v) {
@@ -66,6 +63,7 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
             }
         });
 
+        //on click on save name button, check if name editText is filled, if yes display type buttons, else display toast
         save_name_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,20 +85,15 @@ public class CreateMonsterActivity extends AppCompatActivity implements View.OnC
         });
     }
 
-        //adding the two bottom buttons and their clickListeners
-
-        /*Button back_menu_button = (Button) findViewById(R.id.back_menu_button);
-        back_menu_button.setOnClickListener(this);
-        Button valider_create_button = (Button) findViewById(R.id.valider_create_button);
-        valider_create_button.setOnClickListener(this);*/
-
-
+    //onClick listener on the type buttons layout
     public void onClick(View v) {
 
         int type;
         String name = add_monster_name_edit.getText().toString();
         Intent next_creation = new Intent(CreateMonsterActivity.this, CreateMonster2.class);
 
+        //switch that checks which button has been clicked and affect a values to the "type" variable depending on the type
+        //then starts a new activity with name and type as extras
         switch (v.getId()) {
 
             case R.id.water_image_button :

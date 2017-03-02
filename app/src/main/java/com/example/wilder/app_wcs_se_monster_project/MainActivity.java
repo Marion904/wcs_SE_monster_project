@@ -13,10 +13,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //declaring both buttons
         Button see_monster_button = (Button) findViewById(R.id.see_monster_button);
         Button add_monster_button = (Button) findViewById(R.id.add_monster_button);
 
-
+        //onClick on see_monster_button sends to collection activity
         see_monster_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        //onClick on add_monster_button, sends to CreateMonsterActivity
         add_monster_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
