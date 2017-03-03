@@ -57,14 +57,10 @@ public class MonsterCollectionActivity extends AppCompatActivity {
         if (intent.hasExtra("name")) {
             String name = intent.getStringExtra("name");
             int type = intent.getIntExtra("type", 0);
-            //float life = intent.getStringExtra("life");
             Bundle bundle = getIntent().getExtras();
             float life = bundle.getFloat("life");
-            //String power = intent.getStringExtra("power");
             float power = bundle.getFloat("power");
-          //  String stamina = intent.getStringExtra("stamina");
             float stamina = bundle.getFloat("stamina");
-//            String speed = intent.getStringExtra("speed");
             float speed = bundle.getFloat("speed");
 
             Monster munch = new Monster(name, type, type_array[type], life, power, speed, stamina);
@@ -76,22 +72,7 @@ public class MonsterCollectionActivity extends AppCompatActivity {
             this.collection.setAdapter(this.mAdapter);
 
 
-            //mAdapter.notifyDataSetChanged();
-            collection.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                    Intent monsterProfile = new Intent(MonsterCollectionActivity.this, Monster_Page.class);
-                    Monster clickedMonster = (Monster) mAdapter.getItem(position);
-
-                    monsterProfile.putExtra("Monster",clickedMonster);
-                    monsterProfile.putExtra("position",position);
-
-
-                    startActivity(monsterProfile);
-
-                }
-            });
 
         }else{
             this.mAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, sMonsters);
@@ -105,6 +86,23 @@ public class MonsterCollectionActivity extends AppCompatActivity {
             }
             collection.invalidateViews();
         }
+
+
+        collection.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent monsterProfile = new Intent(MonsterCollectionActivity.this, Monster_Page.class);
+                Monster clickedMonster = (Monster) mAdapter.getItem(position);
+
+                monsterProfile.putExtra("Monster",clickedMonster);
+                monsterProfile.putExtra("position",position);
+
+
+                startActivity(monsterProfile);
+
+            }
+        });
 
     }
 
